@@ -1,0 +1,28 @@
+### Criar transação (valor em centavos: 8000 = R$ 80,00)
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{"description": "Compras no mercado", "category": "GROCERIES", "amount": 8000}
+
+### Validação: valor zero retorna 400
+POST http://localhost:8080/transactions
+Content-Type: application/json
+
+{"description": "Compras no mercado", "category": "GROCERIES", "amount": 0}
+
+### Listar por categoria (GROCERIES, PHARMA ou AUTO)
+GET http://localhost:8080/transactions/GROCERIES
+
+### Resumo dos gastos (novo)
+GET http://localhost:8080/transactions/summary
+
+### Comando de voz: envia áudio e recebe resposta em MP3
+POST http://localhost:8080/transactions/ai
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="recording-1.m4a"
+Content-Type: audio/mp4
+
+< ./src/test/resources/audio/recording-1.m4a
+--boundary--

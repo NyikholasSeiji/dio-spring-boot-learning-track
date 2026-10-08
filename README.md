@@ -1,5 +1,7 @@
 # DIO Spring Boot Learning Track
 
+> **Minha entrega do desafio (Spring AI):** veja [`05-spring-ai/README.md`](05-spring-ai/README.md) — validação de transações, nova consulta/tool de resumo de gastos, correção dos valores em reais, prompt melhorado e testes.
+
 This repository contains a DIO Spring Boot learning track organized as incremental modules.
 
 The track starts with architecture foundations and progressively moves through web APIs, data access, security, service integration, and AI-enabled workflows.
